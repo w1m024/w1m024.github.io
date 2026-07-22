@@ -9,7 +9,7 @@ import { LinkPreset } from "./types/config";
 import I18nKey from "./i18n/i18nKey";
 
 export const siteConfig: SiteConfig = {
-	title: "w1m024 · Notes",
+	title: "w1m's Notes",
 	subtitle: "Systems / Backend / Engineering Notes",
 	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
@@ -68,7 +68,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "/avatar.svg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	avatar: "/avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "w1m024",
 	bio: "一名持续学习、记录与实践的软件开发者。",
 	links: [
