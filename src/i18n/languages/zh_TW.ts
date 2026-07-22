@@ -1,0 +1,47 @@
+import Key from "../i18nKey";
+import type { Translation } from "../translation";
+
+export const zh_TW: Translation = {
+	[Key.home]: "首頁",
+	[Key.about]: "關於",
+	[Key.archive]: "彙整",
+	[Key.search]: "搜尋",
+
+	[Key.tags]: "標籤",
+	[Key.categories]: "分類",
+	[Key.recentPosts]: "最新文章",
+
+	[Key.comments]: "評論",
+
+	[Key.series]: "專欄",
+	[Key.graph]: "圖譜",
+	[Key.partOf]: "第 {index} 篇（共 {total} 篇）",
+	[Key.subSeriesCount]: "子专栏",
+	[Key.subSeriesCountPlural]: "子专栏",
+
+	[Key.views]: "閱讀",
+	[Key.likes]: "點讚",
+
+	[Key.untitled]: "無標題",
+	[Key.uncategorized]: "未分類",
+	[Key.noTags]: "無標籤",
+
+	[Key.wordCount]: "字",
+	[Key.wordsCount]: "字",
+	[Key.minuteCount]: "分鐘",
+	[Key.minutesCount]: "分鐘",
+	[Key.postCount]: "篇文章",
+	[Key.postsCount]: "篇文章",
+
+	[Key.themeColor]: "主題色",
+
+	[Key.lightMode]: "亮色",
+	[Key.darkMode]: "暗色",
+	[Key.systemMode]: "跟隨系統",
+
+	[Key.more]: "更多",
+
+	[Key.author]: "作者",
+	[Key.publishedAt]: "發佈於",
+	[Key.license]: "許可協議",
+};
