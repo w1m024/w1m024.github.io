@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>w1m024 · Notes</title><description>Systems / Backend / Engineering Notes</description><link>https://w1m024.github.io/</link><language>zh-cn</language><item><title>道普云面试</title><link>https://w1m024.github.io/2025/06/20/%E9%81%93%E6%99%AE%E4%BA%91%E9%9D%A2%E8%AF%95/</link><guid isPermaLink="true">https://w1m024.github.io/2025/06/20/%E9%81%93%E6%99%AE%E4%BA%91%E9%9D%A2%E8%AF%95/</guid><description>一次后端岗位面试的复盘：Java 集合、Redis、MySQL、操作系统与 HTTPS。</description><pubDate>Fri, 20 Jun 2025 08:08:54 GMT</pubDate><content:encoded>&lt;p&gt;这是一份面试后的复盘。把当时回答不够扎实的内容记录下来，后续再逐项补齐。&lt;/p&gt;
+&lt;h2&gt;Java 基础&lt;/h2&gt;
+&lt;p&gt;重点回顾了 ArrayList 的动态扩容，以及 HashMap 的数组、链表与红黑树结构。链表长度达到阈值且数组容量足够时，桶会树化；扩容时，元素会保留在原位置或移动到「原位置 + 旧容量」。&lt;/p&gt;
+&lt;h2&gt;Redis 与 MySQL&lt;/h2&gt;
+&lt;p&gt;Redis 更适合承接高频读取和快速状态切换，而不是替代数据库。常见的一致性方案是先更新数据库再删除缓存；对于更高一致性要求的场景，可结合 binlog 订阅实现最终一致性。&lt;/p&gt;
+&lt;h2&gt;接下来&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;梳理索引失效条件与 EXPLAIN 调优方法；&lt;/li&gt;
+&lt;li&gt;补齐 Spring 常用注解和配置类的使用边界；&lt;/li&gt;
+&lt;li&gt;继续理解 HTTPS、内核结构与并发编程基础。&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>曲速科技笔试</title><link>https://w1m024.github.io/2025/06/08/%E6%9B%B2%E9%80%9F%E7%A7%91%E6%8A%80%E7%AC%94%E8%AF%95/</link><guid isPermaLink="true">https://w1m024.github.io/2025/06/08/%E6%9B%B2%E9%80%9F%E7%A7%91%E6%8A%80%E7%AC%94%E8%AF%95/</guid><description>电话系统设计与 Java 并发知识点的笔试复盘。</description><pubDate>Sun, 08 Jun 2025 08:51:36 GMT</pubDate><content:encoded>&lt;p&gt;记录一次笔试中遇到的设计题与并发题，重点不是追求唯一答案，而是练习清晰地拆解问题。&lt;/p&gt;
+&lt;h2&gt;电话系统设计&lt;/h2&gt;
+&lt;p&gt;电话按键和通话状态不应彼此硬编码。把空闲、拨号、通话等状态抽象为独立对象，可以让「拨号 / 挂机」按钮随状态切换，也便于后续增加按键、音效或其他输入方式。&lt;/p&gt;
+&lt;h2&gt;复盘要点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;用状态模式管理电话在不同阶段的行为；&lt;/li&gt;
+&lt;li&gt;把按键、声音和显示等能力拆成可扩展的组件；&lt;/li&gt;
+&lt;li&gt;在答题时先说明对象边界、状态流转和扩展点，再写伪代码。&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>Java 多线程笔记</title><link>https://w1m024.github.io/2025/06/08/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://w1m024.github.io/2025/06/08/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%AC%94%E8%AE%B0/</guid><description>Java 并发容器、线程池、Future 与 ThreadLocal 的学习笔记。</description><pubDate>Sun, 08 Jun 2025 07:11:55 GMT</pubDate><content:encoded>&lt;p&gt;这篇笔记整理 Java 并发编程中最常用的几个入口，后续会随学习持续补充。&lt;/p&gt;
+&lt;h2&gt;线程安全集合&lt;/h2&gt;
+&lt;p&gt;java.util.concurrent 为 List、Map、Set、Queue 和 Deque 提供了相应的并发实现。选择时要先判断读写比例、容量边界和阻塞需求，而不是只看是否「线程安全」。&lt;/p&gt;
+&lt;h2&gt;线程池与 Future&lt;/h2&gt;
+&lt;p&gt;线程池负责复用工作线程，Future 用于获得异步任务的结果。CompletableFuture 进一步提供了组合、回调和异常处理能力，适合编排有依赖关系的异步任务。&lt;/p&gt;
+&lt;h2&gt;ThreadLocal&lt;/h2&gt;
+&lt;p&gt;ThreadLocal 用来在线程处理链中保存上下文。在线程池里必须在 finally 中调用 remove()，否则线程复用可能导致上下文残留、数据串扰或内存泄漏。&lt;/p&gt;
+</content:encoded></item></channel></rss>

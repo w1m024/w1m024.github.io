@@ -1,0 +1,1 @@
+import"./config.U2ta_MkZ.js";async function e(){}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",e):e();const o=window;if(!o.__cardCountsHooked){o.__cardCountsHooked=!0;const t=(n=0)=>{o.swup?.hooks?o.swup.hooks.on("page:view",e):n<50&&setTimeout(()=>t(n+1),100)};t()}
